@@ -4,6 +4,10 @@ https://www.youtube.com/watch?v=x7niho285qs&ab_channel=PedroTech
 App2 SearchFilterReact:
 https://www.youtube.com/watch?v=mZvKPtH9Fzo&ab_channel=PedroTech
 
+
+App3 searchBarInReact with fetch :D
+https://www.youtube.com/watch?v=Q8JyF3wpsHc&ab_channel=ProgrammingWithPrem 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
