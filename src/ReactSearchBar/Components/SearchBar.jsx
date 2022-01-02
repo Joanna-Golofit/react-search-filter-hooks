@@ -1,5 +1,7 @@
 import "./SearchBar.css";
-import SearchIcon from "@material-ui/icons/Search";
+// import SearchIcon from "@material-ui/icons/Search";
+// import CloseIcon from "@material-ui/icons/Close";
+import { Search as SearchIcon, Close as CloseIcon } from "@material-ui/icons";
 import { useState } from "react";
 
 
@@ -9,9 +11,21 @@ const SearchBar = ({ placeholder, data }) => {
   const handleFilter = (e) => {
     console.log(e.target.value);
     const searchWord = e.target.value;
-    const filtered = data.filter((book) => book.title.toLowerCase().includes(searchWord));
+    const filtered = data.filter((book) => book.title.toLowerCase().includes(searchWord.toLowerCase()));
     console.log("filtered", filtered);
-    setFilteredData(filtered);
+    //czyszczenie  pola z wynikami jesli znowu jest pusty input
+    searchWord === "" ? setFilteredData([]) : setFilteredData(filtered);
+  }
+
+  const clearInput = (e) => {
+    console.log(
+      e.target.parentElement.parentElement.firstElementChild
+      // .querySelector("input") // czemu to nie dzilala?
+      // .closest("input")   // czemu to nie dzilala?
+    );
+    let inputValue = e.target.parentElement.parentElement.firstElementChild;
+    console.log(inputValue);
+    inputValue = "";
   }
   return (
     <div className="search">
@@ -19,13 +33,13 @@ const SearchBar = ({ placeholder, data }) => {
       <div className="searchInputs">
         <input type="text" placeholder={placeholder} onChange={handleFilter} />
         <div className="searchIcon">
-          <SearchIcon />
+          {filteredData.length === 0 ? <SearchIcon /> : <CloseIcon id="clearBtn" onClick={clearInput}/> }
         </div>
       </div>
-      {/* {filteredData && ( // empty array is truthy */}
+      {/* {filteredData && ( // empty array is truthy wiec nie zadziala */}
          {filteredData.length !== 0 && (
         <div className="dataResult">
-          {filteredData.map(({ title, link }, key) => (
+          {filteredData.slice(0, 15).map(({ title, link }, key) => (
             <a
               key={key}
               className="dataItem"
