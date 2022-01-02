@@ -1,6 +1,8 @@
 ReactSearchBar:
 https://www.youtube.com/watch?v=x7niho285qs&ab_channel=PedroTech
 
+SearchFilterReact:
+https://www.youtube.com/watch?v=mZvKPtH9Fzo&ab_channel=PedroTech
 
 # Getting Started with Create React App
 

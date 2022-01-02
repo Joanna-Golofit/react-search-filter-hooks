@@ -1,0 +1,21 @@
+.App2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.App2 input {
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  font-style: 20px;
+  padding-left: 10px;
+ border-radius: 5px
+}
+
+p {
+  font-size: 18px;
+  margin: 10px;
+}
