@@ -7,7 +7,7 @@
 }
 
 .App2 input {
-  margin-top: 20px;
+  margin: 20px 0;
   width: 300px;
   height: 40px;
   font-style: 20px;
@@ -15,7 +15,26 @@
  border-radius: 5px
 }
 
+
 p {
   font-size: 18px;
   margin: 10px;
+} 
+
+.App2 .results {
+  background-color: rgb(240, 240, 240);
+  min-height: 10px;
+  max-height: 200px;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  /* fajny efekt przewijania ukrytych danych */
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.App2 .results::-webkit-scrollbar {
+  display: none;
+}
+.user p:hover {
+  background-color: lightgrey;
 }

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 .App1 {
   width: calc(100vw - 30px);
-  height: calc(100vh - 500px);
+  height: calc(100vh - 200px);
   display: flex;
   align-items: center;
   flex-direction: column;
