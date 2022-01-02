@@ -22,8 +22,8 @@ const SearchBar = ({ placeholder, data }) => {
           <SearchIcon />
         </div>
       </div>
-      {/* {filteredData.length !== 0 && ( */}
-      {filteredData.length !== 0 && (
+      {/* {filteredData && ( // empty array is truthy */}
+         {filteredData.length !== 0 && (
         <div className="dataResult">
           {filteredData.map(({ title, link }, key) => (
             <a
